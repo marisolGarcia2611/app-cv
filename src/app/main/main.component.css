@@ -1,0 +1,63 @@
+h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 70px !important;
+}
+
+h2{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 80px !important;
+}
+h6{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px !important;
+}
+p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.img_minimus{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 auto !important;
+    object-fit: cover;
+}
+
+.img_card{
+    object-fit: cover;
+    height: 500px;
+    width: 100%;
+    border-radius: 100%;
+    margin: 0 auto !important;
+}
+
+.img_rounded{
+    object-fit: cover;
+    height: 500px;
+    height: 500px;
+    border-radius: 100%;
+    margin: 0 auto !important;
+}
+
+p{
+    text-align: justify;
+}
+
+.bg-degadrient1{
+    background-color: #dadada;
+    background-image: linear-gradient(90deg, #e0e0e0 0%, #dadada 46%, #ffffff 100%);
+
+}
+
+.bg-degadrient2{
+    background-color: #dadada;
+    background-image: linear-gradient(90deg, #ffffff 0%, #dadada 46%, #e0e0e0 100%);
+
+}
+
+.bg-degadrient3{
+    background-color: #dadada;
+    background-image: linear-gradient(90deg, #242424 0%, #9b9b9b 46%, #ffffff 100%);
+
+}

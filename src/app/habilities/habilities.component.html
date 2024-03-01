@@ -1,0 +1,13 @@
+<div class="container">
+    <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+        <h3>Habilities of {{name}}</h3>
+        <nav class="nav nav-pills flex-column">
+            @for(habilitie of habilities; track habilitie.id){
+                <a class="nav-link  animate__animated animate__headShake" (click)="fav(habilitie.name, habilitie.id)">{{habilitie.id}}. {{habilitie.name}}</a>
+            }
+        </nav>
+      </nav>
+      
+      
+    <h5></h5>
+</div>

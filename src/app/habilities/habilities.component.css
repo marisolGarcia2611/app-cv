@@ -1,0 +1,16 @@
+*{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+a{
+    color: rgb(114, 114, 114);
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    -webkit-transform: scale(1.1) !important;
+    transform: scale(1.04) !important;
+}
+

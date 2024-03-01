@@ -1,0 +1,25 @@
+<div class="container rounded-5 bg-light mb-3  animate__animated animate__swing">
+
+   <div class="row">
+      <div class="col-md-6">
+            <!--comunicacion de hijo a padre referimos con getfavorite -->
+            <app-habilities 
+            (addFavoriteEvent)="getFavorite($event)" (addFavoriteEvent2)="getFavorite2($event)"
+            name = "{{name}}"></app-habilities> <!--comunicacion de padre a hijo -->
+      </div>
+
+      <div class="col-md-6 p-4">
+         @if(favHabilities != ''){
+            <div class="bg-body rounded-5 p-4 mb-2">
+               <h4 id="item-1">{{favHabilitiesId}}. Details of habilitie {{favHabilities}}</h4>
+               @for(detail of details; track detail.id){
+                  @if(favHabilitiesId == detail.id){
+                  <p>{{detail.description}}</p>
+                  }
+               }
+            </div>
+         }
+      </div>
+   </div>
+  
+</div>

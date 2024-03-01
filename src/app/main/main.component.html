@@ -1,0 +1,203 @@
+<div class="container">
+  <div class="row p-2">
+    <div class="col-md-6 mb-2">
+      <div class="container bg-light rounded-5 p-4  animate__animated animate__swing">
+        <div class="row mb-3">
+              <!-- date.getHours() -->
+            @if (date.getHours() >= 5 && date.getHours() < 13) {
+                <h1>Hola soy {{name}}, Buenos Días</h1> 
+
+                <div class="col-md-4 text-start">
+                  <img class=" animate__animated animate__shakeY" src="../../assets/sun.webp" width="150px" alt="">
+                </div>
+
+            }@else if(date.getHours() >= 13 && date.getHours() < 20){
+                <h1>Hola soy {{name}}, Buenas Tardes</h1>
+
+                <div class="col-md-4 text-start">
+                  <img class=" animate__animated animate__shakeY" src="../../assets/plant.png" width="150px" alt="">
+                </div>
+
+            }@else{
+                <h1>Hola soy {{name}}, Buenas Noches</h1>
+
+                <div class="col-md-4 text-start">
+                  <img class=" animate__animated animate__shakeY" src="../../assets/moon.png" width="150px" alt="">
+                </div>
+            }
+            
+            <!-- Ejemplo de contenido dinamico con clicks -->
+            <div class="col-md-8 bg-body shadow rounded-4 p-3">
+              @if(sendMessage){
+                  <h4 class="mb-2">¿What do you mean?</h4>
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Comments</label>
+                  </div>
+                  <div class="text-end mt-3">
+                    <button class="btn btn-primary" type="submit" (click)="sendMessage = false"><i class="fa-solid fa-paper-plane"></i> send now</button>
+                  </div>
+          
+              }@else{
+                  <h3 class="fw-light">Contact me</h3>
+                  <br>
+                  <button class="btn btn-primary" (click)="sendMessage = true"><i class="fa-solid fa-paper-plane"></i> send message</button>
+              }
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 mb-2">
+        <div class="bg-light rounded-5 p-4  animate__animated animate__swing">
+          <div class="row">
+            <div class="col-md-5 text-center p-4">
+              <img class="img_minimus  animate__animated animate__flipInY" src="../../assets/profileBlack.jpg" alt="">
+            </div>
+            
+            <div class="col-md-6">
+              <h6>ING DESARROLLO Y GESTIÓN DE SOFTWARE {{name.toUpperCase()}}</h6>
+
+              <p class="text-start">
+                Desarrollador de Software
+                Multiplataforma versátil, con
+                experiencia en la planificación y
+                desarrollo de planes de proyectos
+                de tecnologías de la información
+                mediante la coordinación y
+                participacióndetodoelequipo.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <h6>FORMACIÓN</h6>
+            <p class=" text-start">
+              <b>TSU</b><br>
+                Tecnologías de la información:
+                Área desarrollo de software
+                multiplataforma.
+            </p>
+            <p>
+              <b>INGENIERÍA</b><br>
+                Desarrollo y Gestión de Software
+            </p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+ <!-- Ejemplo de comunicacion de padre a hijo -->
+  <div class="col-12">
+    <app-user name = "{{name}}"></app-user>
+  </div>
+
+  
+
+  <div class="row">
+    <div class="card mb-3 border-0">
+      <div class="row g-0">
+        <div class="col-md-5">
+          <img src="../../assets/yummy.PNG" alt="profile" class="img-fluid rounded-end img_card">
+        </div>
+
+        <div class="col-md-7 bg-degadrient1">
+          <div class="card-body">
+            <h2 class="card-title">Perfil <br> Ejecutivo</h2>
+            <p class="card-text fw-light">
+              Desarrollador de Software
+              Multiplataforma versátil, con
+              experiencia en la planificación y
+              desarrollo de planes de proyectos
+              de tecnologías de la información
+              mediante la coordinación y
+              participacióndetodoelequipo.
+
+              <br><br>
+
+              Gran habilidad en el Diseño y en la
+              aplicación de la Experiencia de
+              Usuario en aplicaciones de diversos
+              entornos.
+            </p>
+            <p class="card-text"><small class="text-secondary">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3 border-0">
+      <div class="row g-0">
+        <div class="col-md-7 bg-degadrient2">
+          <div class="card-body">
+            <h2 class="card-title">Perfil <br> Ejecutivo</h2>
+            <p class="card-text fw-light">
+              Desarrollador de Software
+              Multiplataforma versátil, con
+              experiencia en la planificación y
+              desarrollo de planes de proyectos
+              de tecnologías de la información
+              mediante la coordinación y
+              participacióndetodoelequipo.
+
+              <br><br>
+
+              Gran habilidad en el Diseño y en la
+              aplicación de la Experiencia de
+              Usuario en aplicaciones de diversos
+              entornos.
+            </p>
+            <p class="card-text"><small class="text-secondary">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <img src="../../assets/iterava.PNG" alt="profile" class="img-fluid rounded-start img_card">
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3 border-0">
+      <div class="row g-0">
+        <div class="col-md-5">
+          <img src="../../assets/duung.PNG" alt="profile" class="img-fluid rounded-end img_card">
+        </div>
+
+        <div class="col-md-7 bg-degadrient3">
+          <div class="card-body">
+            <h2 class="card-title text-light">Perfil <br> Ejecutivo</h2>
+            <p class="card-text fw-light text-light">
+              Desarrollador de Software
+              Multiplataforma versátil, con
+              experiencia en la planificación y
+              desarrollo de planes de proyectos
+              de tecnologías de la información
+              mediante la coordinación y
+              participacióndetodoelequipo.
+
+              <br><br>
+
+              Gran habilidad en el Diseño y en la
+              aplicación de la Experiencia de
+              Usuario en aplicaciones de diversos
+              entornos.
+            </p>
+            <p class="card-text"><small class="text-light">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ejemplo de carga de contenido -->
+  <div class="row">
+    <!-- para que nosotros podamos seccionar nuestro contenido segun la carga y el scroll de la pagina, defiriendo la carga con defer -->
+    @defer (on viewport) { 
+      <app-comments></app-comments>
+    }@placeholder {
+      <p>El huelo que va a dejar los comentario, mientras cargan</p>
+    }@loading {
+      Cargando...
+    }
+  </div>
+</div>

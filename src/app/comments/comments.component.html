@@ -1,0 +1,49 @@
+<div class="container mt-5 mb-3">
+    <div class="row">
+        <div class="col-md-8 mb-3">
+            <div class="rounded-5 bg-body shadow p-3">
+                <h4>Feed of Comments</h4>
+       
+                <div class="p-3 scrollcard">
+                    <div class="card p-2 m-2 text-end">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, doloribus. Corrupti cupiditate possimus voluptas enim soluta.
+                    </div>
+                    <div class="card p-2 m-2 text-end">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, doloribus. Corrupti cupiditate possimus voluptas enim soluta.
+                    </div>
+                    <div class="card p-2 m-2 text-end">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, doloribus. Corrupti cupiditate possimus voluptas enim soluta.
+                    </div>
+                    <div class="card p-2 m-2 text-end">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, doloribus. Corrupti cupiditate possimus voluptas enim soluta.
+                    </div>
+                    <div class="card p-2 m-2 text-end">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, doloribus. Corrupti cupiditate possimus voluptas enim soluta.
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="rounded-5 bg-light p-4">
+                    @if(!sendComments){
+                        <h4>Add Comments to Profile</h4>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Comments</label>
+                        </div>
+                        
+                        <div class="text-end mt-3">
+                            <button class="btn btn-primary" type="submit" (click)="sendComments = true"><i class="fa-solid fa-paper-plane"></i> send now</button>
+                        </div>
+                    }@else {
+                        <div class="text-center">
+                            <h5>¡Done, send comment!</h5>
+                            <button class="btn btn-success" style="border-radius: 100%;" (click)="sendComments = false"> <h1><i class="fa-solid fa-check"></i> </h1></button>
+                        </div>
+                    }
+            </div>
+        </div>
+    </div>
+</div>
